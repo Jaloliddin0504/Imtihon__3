@@ -1,0 +1,20 @@
+@mixin button {
+  font-weight: 700;
+font-size: 15px;
+line-height: 25px;
+text-align: center;
+color: #FFFFFF;
+padding: 11px 37px;
+background: #FCB72B;
+border: 3px solid #FCB72B;
+text-decoration: none;
+}
+@mixin para {
+  font-family: 'Lexend Deca';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 25px;
+color: #FFFFFF;
+}
+

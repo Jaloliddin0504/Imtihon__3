@@ -1,0 +1,140 @@
+.container {
+  margin: 0 auto;
+  max-width: 1186px;
+
+}
+header {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.header__wrappar {
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // justify-content: space-between;
+}
+.navigation {
+  display: flex;
+}
+.scoot__logo {
+  display: block;
+  padding-right: 58px;
+  width: 100%;
+}
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  list-style: none;
+}
+.header__link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  color: #939CAA;
+}
+.header__link:hover {
+  color:#000;
+}
+@mixin button{
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 14px 40px;
+  background: #FCB72B;
+  text-decoration: none;
+  transition: all .3s ease;
+  border: 3px solid #FCB72B;
+}
+.btn {
+  @include button;
+}
+#menu__checkbox {
+  position: absolute;
+  appearance: none;
+}
+.btn:hover {
+  background-color: #FFFFFF;
+  color: #FCB72B;
+  border: 3px solid #FCB72B;
+}
+.fa-bars {
+  color: #FCB72B;
+}
+.menu__togler, .btn-secondary, .menu_exit {
+  display: none;
+}
+// mobile
+
+@media (max-width:767px) {
+  .btn {
+    display: none;
+  }
+  .menu__togler {
+    display: block;
+  }
+  .scoot__logo {
+    margin: 0 auto;
+    padding-left:60px;
+    min-width: 75.5px;
+    min-height: 20px;
+  }
+  .header__wrappar {
+    position: relative;
+    padding: 22px  32px;
+  }
+  .header__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 20px;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #000;
+    height: 100vh;
+    width: 60%;
+    align-items: flex-start;
+    transform: translateX(-100%);
+    transition: all .7s ease;
+  }
+  .header__link {
+    color: #fff;
+  }
+  .header__link:hover {
+    color: blue;
+  }
+  .btn-secondary {
+    display: block;
+    border-radius: 20px;
+  }
+  #menu__checkbox:checked  + .header__list {
+    transform: translateX(0);
+  }
+  .menu_exit {
+    display: block;
+
+  }
+  .fa-xmark {
+    color: #FCB72B;
+  }
+  .header__exit {
+    align-self: flex-end;
+  }
+}
+
+// tablet
+@media (min-width:768px) and (max-width:1024px)
+{
+  .header__wrappar {
+    padding: 22px 40px;
+  }
+}
